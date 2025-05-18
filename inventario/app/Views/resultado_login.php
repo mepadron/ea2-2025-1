@@ -33,6 +33,7 @@
             <div class="mt-4">
                 <a href="/login" class="btn btn-secondary">Volver al login</a>
                 <?php if($tipo == 'success'): ?>
+                <p>Hola user <?= $nombre; ?></p>
                 <a href="/" class="btn btn-primary">Ir al inicio</a>
                 <?php endif; ?>
             </div>

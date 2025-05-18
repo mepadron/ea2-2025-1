@@ -27,14 +27,17 @@ class Home extends BaseController
         
         // Instanciar el modelo de validación
         $userData = new ValidarUserModel();
+        $user=$userData->validarusuario($lForm,$cForm);
         
         // Validar credenciales
-        if($userData->loginDB == $lForm && $userData->claveDB == $cForm) {
+        if($user) {
+            // print_r($user['nombre']);
             // Credenciales correctas
             $data = [
                 'titulo' => 'Acceso Exitoso',
                 'mensaje' => 'Usted puede entrar al SISTEMA',
-                'tipo' => 'success'
+                'tipo' => 'success',
+                'nombre'=>$user['nombre']
             ];
             
             // Aquí podrías iniciar una sesión o redirigir a un dashboard
