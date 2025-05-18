@@ -228,6 +228,7 @@
         <h1>Welcome to CodeIgniter <?= CodeIgniter\CodeIgniter::CI_VERSION ?>    <?= base_url();?></h1>
 
         <h2>The small framework with powerful features</h2>
+        <?php include_once "login_view.php"; ?>
 
     </div>
 
